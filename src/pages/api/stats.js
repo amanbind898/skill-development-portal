@@ -1,6 +1,6 @@
-// pages/api/profile.js
-import { db } from "../../utils/db";
-import { CodingPlatformStats } from "../../utils/schema";
+// src/pages/api/stats.js
+import { db } from "../../../utils/db";
+import { CodingPlatformStats } from "../../../utils/schema";
 import { eq } from "drizzle-orm";
 
 export default async function handler(req, res) {

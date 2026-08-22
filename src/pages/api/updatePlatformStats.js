@@ -1,11 +1,11 @@
-import { db } from "../../utils/db";
-import { CodingPlatformStats } from "../../utils/schema";
+import { db } from "../../../utils/db";
+import { CodingPlatformStats } from "../../../utils/schema";
 import { 
   fetchLeetCodeStats, 
   fetchGeeksForGeeksStats, 
   fetchCodeforcesStats, 
   fetchCodeChefStats 
-} from "../../utils/platformAPI";
+} from "../../../utils/platformAPI";
 import { eq, and } from "drizzle-orm";
 
 export default async function handler(req, res) {

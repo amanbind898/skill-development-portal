@@ -1,104 +1,116 @@
+# 🚀 SkillUp - Skill Development Portal
 
-# Skill Development Portal
+A modern, full-stack learning and skill development platform designed for college students. SkillUp helps learners master technical concepts, track competitive programming & DSA progress across multiple platforms, prepare for technical interviews, and access curated resources with AI assistance.
 
-Welcome to the **Skill Development Portal** for our college students! This platform is designed to provide study resources, interview preparation, and a student dashboard to track progress in competitive coding, DSA, and other skills.
+---
 
-## Table of Contents
-1. [Features](#features)
-2. [Getting Started](#getting-started)
-3. [Contributing](#contributing)
-4. [Code of Conduct](#code-of-conduct)
-5. [License](#license)
-6. [Contact](#contact)
+## ✨ Features
 
-## Features
+- 📚 **Curated Learning Roadmaps & Resources**: Comprehensive study materials for Web Development, AI/ML, DSA, Competitive Programming, Blockchain, and Cybersecurity.
+- 📊 **Unified Coding Analytics**: Real-time stats and profile tracking integrated with LeetCode, Codeforces, CodeChef, and GeeksforGeeks.
+- 🤖 **AI Learning Assistant**: Built-in AI chatbot for guidance, concept explanations, and personalized study strategies.
+- 👤 **Student & Profile Management**: Complete user profile management with social/coding links, achievements, and progress tracking powered by Clerk authentication.
+- ⚡ **Modern Full-Stack Architecture**: Powered by Next.js App Router, TailwindCSS, Drizzle ORM, and PostgreSQL (Neon).
 
-### Home Page
-- Introduce the portal's features and provide easy access to the different sections.
+---
 
-### Study Resources
-- Access materials for:
-  - Web Development
-  - AI/ML (Artificial Intelligence and Machine Learning)
-  - DSA (Data Structures and Algorithms)
-  - CP (Competitive Programming)
-  - Blockchain
-  - CyberSecurity
-  - Interview Preparation
+## 🛠️ Tech Stack
 
-### Student Dashboard
-- **Progress Tracking:** View progress in competitive coding and DSA.
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router & Serverless API Routes)
+- **Frontend UI**: [React 19](https://react.dev/), [TailwindCSS](https://tailwindcss.com/), [Lucide Icons](https://lucide.dev/), [Radix UI](https://www.radix-ui.com/)
+- **Authentication**: [Clerk](https://clerk.com/)
+- **Database & ORM**: [PostgreSQL (Neon)](https://neon.tech/) & [Drizzle ORM](https://orm.drizzle.team/)
+- **AI Integration**: [Google Gemini API](https://ai.google.dev/)
+- **Scraping & APIs**: [Cheerio](https://cheerio.js.org/) & [Axios](https://axios-http.com/)
 
-### Admin Dashboard
-- Manage students' progress and post important updates or announcements.
+---
 
-## Getting Started
+## 🚀 Quick Start
 
-### Clone the Repository
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/skill-development-portal.git
-```
-
-### Navigate to the Project Directory
-
-```bash
+git clone https://github.com/amanbind898/skill-development-portal.git
 cd skill-development-portal
 ```
 
-### Navigate to the frontend Directory
+### 2. Install Dependencies
 
 ```bash
-cd frontend
+npm install --legacy-peer-deps
 ```
 
-### Install Dependencies
+### 3. Setup Environment Variables
+
+Copy the example environment file and configure your keys:
 
 ```bash
-npm install
+cp .env.example .env.local
 ```
 
-### Run the Application
+Fill in your credentials in `.env.local`:
+
+```env
+# Neon / PostgreSQL Database URL
+DRIZZLE_DB_URL=postgresql://user:password@endpoint.neon.tech/dbname?sslmode=require
+
+# Clerk Authentication Keys
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
+CLERK_SECRET_KEY=sk_test_...
+
+# Clerk URL Routes
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
+
+# Google Gemini API Key
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+### 4. Database Setup
+
+Push the Drizzle schema to your database:
+
+```bash
+npm run db:push
+```
+
+### 5. Run the Development Server
 
 ```bash
 npm run dev
 ```
 
-The application will run on `http://localhost:3000`.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Contributing
-read the contribution rules here : [CONTRIBUTING.md](https://github.com/amanbind898/skill-development-portal/blob/main/CONTRIBUTING.md)
+---
 
+## 📜 Available Scripts
 
-## Code of Conduct
+| Command | Description |
+| :--- | :--- |
+| `npm run dev` | Starts the development server with Turbopack |
+| `npm run build` | Compiles the production build |
+| `npm run start` | Runs the production server |
+| `npm run lint` | Runs ESLint to check code quality |
+| `npm run db:push` | Pushes the database schema with Drizzle Kit |
+| `npm run db:studio` | Opens Drizzle Studio for visual database management |
 
-We are committed to creating an open and welcoming environment for all participants. As a contributor to this project, you agree to abide by the following:
+---
 
-### Our Pledge
-In the interest of fostering an open and inclusive community, we pledge to respect all individuals who contribute to the project, regardless of their level of experience, gender, identity, and expression.
+## 🤝 Contributing
 
-### Our Standards
-Examples of behavior that contribute to a positive environment include:
-- Using welcoming and inclusive language.
-- Being respectful of differing viewpoints and experiences.
-- Gracefully accepting constructive criticism.
-- Focusing on what is best for the community.
+Contributions are welcome! Please check out [CONTRIBUTING.md](CONTRIBUTING.md) and adhere to our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
-Examples of unacceptable behavior include:
-- Harassment, insults, or derogatory comments.
-- Personal or political attacks.
-- Public or private harassment.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### Our Responsibilities
-Project maintainers are responsible for ensuring that the community is a safe place for all contributors and have the right to remove comments, commits, and contributions that violate this Code of Conduct.
+---
 
-### Enforcement
-Instances of abusive or unacceptable behavior may be reported by contacting the project team at [aman.2201086cs@iiitbh.ac.in](mailto:aman.2201086cs@iiitbh.ac.in). All complaints will be reviewed and investigated, and the necessary actions will be taken to maintain a safe environment.
+## 📄 License
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
-## Contact
-
-For any questions or support, reach out to us..
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
